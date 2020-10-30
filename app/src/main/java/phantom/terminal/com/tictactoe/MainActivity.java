@@ -26,10 +26,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if(savedInstanceState != null){
-            board = (GameBoard)savedInstanceState.getParcelable("GameBoard");
-            buttons = board.positions;
-        }
+//        if(savedInstanceState != null){
+//            board = (GameBoard)savedInstanceState.getParcelable("GameBoard");
+//            buttons = board.positions;
+//        }
         Position.main_activity = this;
         buttons = new Position[9];
         buttons[0] = new Position(1, (Button)(findViewById(R.id.button_1)));
@@ -52,11 +52,11 @@ public class MainActivity extends AppCompatActivity {
         current_player = player_1;
     }
 
-    @Override
-    public void onSaveInstanceState(Bundle savedInstanceState){
-        super.onSaveInstanceState(savedInstanceState);
-        savedInstanceState.putParcelable("GameBoard", board);
-    }
+//    @Override
+//    public void onSaveInstanceState(Bundle savedInstanceState){
+//        super.onSaveInstanceState(savedInstanceState);
+//        savedInstanceState.putParcelable("GameBoard", board);
+//    }
 
     public void buttonOnClick(View v){
         for(Position each_button: buttons){

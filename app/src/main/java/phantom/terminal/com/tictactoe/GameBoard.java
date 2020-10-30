@@ -1,8 +1,6 @@
 package phantom.terminal.com.tictactoe;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
-import android.os.Parcel;
-import android.os.Parcelable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -78,7 +76,7 @@ class Position{
 	}
 
 }
-public class GameBoard implements Parcelable {
+public class GameBoard{
 //	public static int default_color = Color.rgb(102, 102, 102);
 	public MainActivity main_activity;
 	public Position positions[];
@@ -96,20 +94,20 @@ public class GameBoard implements Parcelable {
 		this.check_arr = new Position[3];
 	}
 
-	protected GameBoard(Parcel in) {
-	}
-
-	public static final Creator<GameBoard> CREATOR = new Creator<GameBoard>() {
-		@Override
-		public GameBoard createFromParcel(Parcel in) {
-			return new GameBoard(in);
-		}
-
-		@Override
-		public GameBoard[] newArray(int size) {
-			return new GameBoard[size];
-		}
-	};
+//	protected GameBoard(Parcel in) {
+//	}
+//
+//	public static final Creator<GameBoard> CREATOR = new Creator<GameBoard>() {
+//		@Override
+//		public GameBoard createFromParcel(Parcel in) {
+//			return new GameBoard(in);
+//		}
+//
+//		@Override
+//		public GameBoard[] newArray(int size) {
+//			return new GameBoard[size];
+//		}
+//	};
 
 	public static boolean winPattern(Position a, Position b, Position c){
 		return a.equal_mark(b) && b.equal_mark(c) && !a.equal_mark(PlayerType.None);
@@ -188,16 +186,16 @@ public class GameBoard implements Parcelable {
 
 	}
 
-	@Override
-	public int describeContents() {
-		return 0;
-	}
-
-	@Override
-	public void writeToParcel(Parcel parcel, int i) {
-		parcel.writeValue(main_activity);
-		parcel.writeValue(positions);
-		parcel.writeValue(board);
-		parcel.writeValue(check_arr);
-	}
+//	@Override
+//	public int describeContents() {
+//		return 0;
+//	}
+//
+//	@Override
+//	public void writeToParcel(Parcel parcel, int i) {
+//		parcel.writeValue(main_activity);
+//		parcel.writeValue(positions);
+//		parcel.writeValue(board);
+//		parcel.writeValue(check_arr);
+//	}
 }
