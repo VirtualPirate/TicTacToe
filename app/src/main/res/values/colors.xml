@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#666</color>
+    <color name="colorPrimaryDark">#555</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="line_color">#111</color>
+    <color name="button_color">#bbb</color>
+    <color name="app_button">#4169e1</color>
+    <color name="button_text_color">#222</color>
+    <color name="app_background">#f5f5f5</color>
+    <color name="text_color">#fff</color>
+    <color name="player_1_color">#7d7</color>
+    <color name="player_2_color">#b19cd9</color>'
+    <color name="win_background">#333</color>
+    <color name="win_foreground">#fff</color>
+    <color name="computer_select_background">#ffcbcc</color>
+    <color name="human_select_background">#add8e6</color>
+</resources>
